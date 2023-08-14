@@ -135,7 +135,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translate(-29vw, 30vh);
+        transform: translate(-29vw, 35vh);
     }
 
 }
@@ -198,7 +198,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translate(13vw, -30vh);
+        transform: translate(13vw, -35vh);
     }
     
 }
