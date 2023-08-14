@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="shortcut icon" href="relogio.ico" type="image/x-icon">
+
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 5em;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            }
+
+        time {
+            
+            font-weight: normal;
+            width: 400px;
+            height:100px;
+            border: 3px solid black;
+            border-radius: 200px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        #tema {
+            -webkit-appearance: none;
+            appearance: none; 
+            width: 70px;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid black;
+            padding: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 30px;
+            height: 5px;
+            background: #ccccccb9;
+            position: absolute;
+            top: 50%;
+            transform: translate(50vh, -22vw);
+        }
+
+        #tema::-webkit-slider-thumb {
+            appearance: none;
+            height: 30px;
+            width: 30px;
+            background: transparent;
+            background-image: url("botaoTema.png");
+            background-size: cover;
+            border-radius: 50px;
+            
+        }
+
+        .container {
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <time>12:00:00</time>
+
+    <div class="container">
+        <input type="range" min="1" max="3" value="2" id="tema" onchange="verificar()"/>
+    </div>
+
+    <script>
+        //Relógio
+        let agora = () =>{
+
+        let horasAgora = document.querySelector('time');
+
+        let dateNow = new Date();
+
+        let horas = dateNow.getHours();
+        let min = dateNow.getMinutes();
+        let seg = dateNow.getSeconds();
+
+
+        horas = horas < 10 ? '0'+ horas : horas; 
+        min = min < 10 ? '0'+ min : min; 
+        seg = seg < 10 ? '0'+ seg : seg; 
+
+        horasAgora.innerText = horas +':'+ min +':'+ seg;
+        }
+
+        agora()
+        setInterval(agora, 1000);
+
+        //Input
+        function verificar() {
+            let dateNow = new Date();
+            let horas = dateNow.getHours();
+            let minutos = dateNow.getMinutes();
+            let valorInput = parseInt(document.getElementById('tema').value);
+            let body = document.querySelector('body');
+            let tema = document.querySelector('#tema::-webkit-slider-thumb');
+            let time = document.querySelector('time');
+            let horario;
+            
+
+            if (valorInput == 1) {
+                body.style.cssText = 
+                'background-color: #cccccc';
+                time.style.cssText = 
+                'border: 3px solid black';
+            } else if (valorInput == 2) {
+                if (horas >= 6 && horas < 18) {
+                    body.style.cssText = 
+                    'background-color: #cccccc';
+                    time.style.cssText = 
+                    'border: 3px solid black';
+                    console.log('Dia');
+                } else {
+                    body.style.cssText = 
+                    'background-color: #242424;' +
+                    'color: white;';
+                    time.style.cssText = 
+                    'border: 3px solid white;';
+                    tema.style.cssText = 
+                    'background-image: url("botaoTema.jpg");' +
+                    'appearance: none' +
+                    'border: 3px solid black;';
+                    console.log('Noite');
+                }
+            } else {
+                body.style.cssText = 
+                'background-color: #242424;' +
+                'color: white;';
+                time.style.cssText = 
+                'border: 3px solid white;';
+                tema.style.cssText =
+                'border: 3px solid white;' +
+                'padding: 15px;';
+                
+            }
+        }
+        setInterval(verificar, 1);
+
+    </script>
+</body>
+</html>
