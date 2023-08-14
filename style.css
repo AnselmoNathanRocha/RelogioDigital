@@ -1,0 +1,204 @@
+@media screen and (min-width: 1000px) {
+    html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 5em;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        }
+    
+    time {
+        
+        font-weight: normal;
+        width: 400px;
+        height:100px;
+        border: 3px solid black;
+        border-radius: 200px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    #tema {
+        -webkit-appearance: none;
+        appearance: none; 
+        width: 70px;
+        cursor: pointer;
+        outline: none;
+        border: 1px solid black;
+        padding: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 30px;
+        height: 5px;
+        background: #ccccccb9;
+    }
+    
+    #tema::-webkit-slider-thumb {
+        appearance: none;
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        background-image: url("botaoTema.png");
+        background-size: cover;
+        border-radius: 50px;
+        
+    }
+    
+    input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-19vw, 25vh);
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 5em;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        }
+    
+    time {
+        
+        font-weight: normal;
+        width: 400px;
+        height:100px;
+        border: 3px solid black;
+        border-radius: 200px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    #tema {
+        -webkit-appearance: none;
+        appearance: none; 
+        width: 70px;
+        cursor: pointer;
+        outline: none;
+        border: 1px solid black;
+        padding: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 30px;
+        height: 5px;
+        background: #ccccccb9;
+    }
+    
+    #tema::-webkit-slider-thumb {
+        appearance: none;
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        background-image: url("botaoTema.png");
+        background-size: cover;
+        border-radius: 50px;
+        
+    }
+    
+    input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-29vw, 25vh);
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+    html {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        font-size: 1.6em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    time {
+        font-weight: normal;
+        width: 200px;
+        height:50px;
+        border: 3px solid black;
+        border-radius: 100px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    #tema {
+        -webkit-appearance: none;
+        appearance: none; 
+        width: 70px;
+        cursor: pointer;
+        outline: none;
+        border: 1px solid black;
+        padding: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 30px;
+        height: 5px;
+        background: #ccccccb9;
+    }
+    
+    #tema::-webkit-slider-thumb {
+        appearance: none;
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        background-image: url("botaoTema.png");
+        background-size: cover;
+        border-radius: 50px;
+        
+    }
+    
+    input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(13vw, -25vh);
+    }
+    
+}
